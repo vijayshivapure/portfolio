@@ -1,0 +1,32 @@
+package com.example.Portfolio.demo.controller;
+
+import com.example.Portfolio.demo.dto.dto;
+import com.example.Portfolio.demo.entity.entity;
+import com.example.Portfolio.demo.repo.repo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api")
+@CrossOrigin(origins = "*")
+public class controller {
+
+    @Autowired
+    private repo Repo;
+
+    @PostMapping("/contact")
+    public String receiveContact(@RequestBody dto dto) {
+
+        // ✅ Create a new instance of your entity
+        entity entity = new entity();
+        entity.setName(dto.getName());
+        entity.setEmail(dto.getEmail());
+        entity.setMessage(dto.getMessage());
+
+        // ✅ Save to database
+        Repo.save(entity);
+
+        return "Message Send successfully!";
+    }
+}

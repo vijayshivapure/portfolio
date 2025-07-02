@@ -1,0 +1,19 @@
+package com.example.Portfolio.controller;
+
+import org.springframework.web.bind.annotation.*;
+import com.example.Portfolio.dto.DemoApplicationdto;
+
+@RestController
+@RequestMapping("/api")
+@CrossOrigin(origins = "*")
+public class DemoApplicationcontroller {
+
+    @PostMapping("/contact")
+    public String receiveContact(@RequestBody DemoApplicationdto demoApplicationdto) {
+        System.out.println("Contact Message Received:");
+        System.out.println("Name: " + demoApplicationdto.getName());
+        System.out.println("Email: " + demoApplicationdto.getEmail());
+        System.out.println("Message: " + demoApplicationdto.getMessage());
+        return "Message sent successfully!";
+    }
+}

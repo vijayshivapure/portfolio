@@ -1,0 +1,12 @@
+spring.application.name=demo
+
+# DataSource
+spring.datasource.url=jdbc:mysql://localhost:3306/Protfolio
+spring.datasource.username=root
+spring.datasource.password=Vijay@1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect

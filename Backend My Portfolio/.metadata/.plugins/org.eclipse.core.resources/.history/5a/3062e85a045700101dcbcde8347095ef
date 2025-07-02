@@ -1,0 +1,9 @@
+package com.example.Portfolio.dto;
+
+public class DemoApplicationdto {
+    private String name;
+    private String email;
+    private String message;
+
+    // Getters and Setters
+}

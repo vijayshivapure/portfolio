@@ -1,0 +1,10 @@
+package com.example.Portfolio.demo.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.example.Portfolio.demo.entity.entity;
+
+@Repository
+public interface DemoRepository extends JpaRepository<entity, Long> {
+    // You can add custom query methods here later
+}
